@@ -3,7 +3,6 @@ import { addANote } from "@/lib/store";
 export async function GET(){
     return Response.json({ success: true, notes: getNote() })
 }
-import { getNote, addANote } from "@/lib/store";
 
 export async function POST(request) {
     const body = await request.json()
