@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from "next/navigation"
 import { useState,useEffect } from "react"
-export default function edit({params}){
+export default function Edit({params}){
     const router=useRouter()
     const [title,setTitle]=useState("")
     const[content,setContent]=useState("")
