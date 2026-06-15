@@ -1,3 +1,89 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import "tailwindcss";
+
+@layer utilities {
+    .font-silkscreen {
+        font-family: 'Silkscreen', cursive;
+    }
+    .font-dotgothic {
+        font-family: 'DotGothic16', sans-serif;
+    }
+}
+@layer utilities {
+    /* Primary Style: Stark Ink & Slate */
+    .border-retro-ink {
+        border: 2px solid #1E1E1E; /* Primary Ink */
+        box-shadow: 
+            inset 2px 2px 0px #C8BA9C, /* Ruled Lines Tan (Highlight) */
+            inset -2px -2px 0px #3A3F44, /* Device Shell Gray (Inner Shadow) */
+            4px 4px 0px #1E1E1E; /* Primary Ink (Outer Drop Shadow) */
+    }
+
+    /* Accent Style: Warm Header Browns */
+    .border-retro-brown {
+        border: 2px solid #79553D; /* Header Banner Brown */
+        box-shadow: 
+            inset 2px 2px 0px #E5D9BB, /* Aged LCD Paper (Highlight) */
+            inset -2px -2px 0px #4A3219, /* Dark Coffee (Inner Shadow) */
+            4px 4px 0px #4A3219; /* Dark Coffee (Outer Drop Shadow) */
+    }
+    
+
+}
+body {
+    cursor: url('/cursor(1).png') 0 0, auto;
+}
+
+button, label, a {
+    cursor: url('/click16.png') 0 0, pointer;
+}
+
+input, textarea {
+    cursor: url('/text-select.png') 0 0, text;
+}   
+/* Retro Scrollbar Base */
+::-webkit-scrollbar {
+  width: 16px; /* Chunky width for that retro feel */
+  height: 16px;
+  background-color: #E5D9BB; /* Aged LCD Paper background */
+  border-left: 2px solid #4A3219; /* Primary Ink border separating it from content */
+}
+
+/* The Draggable 'Thumb' or Wheel */
+::-webkit-scrollbar-thumb {
+  background-color: #4A3219; /* Device Shell Gray */
+  border: 2px solid #1E1E1E; /* Primary Ink outline */
+  box-shadow: inset 2px 2px 0px #C8BA9C; /* Ruled Lines Tan for 3D highlight */
+}
+
+/* Thumb Hover State */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4A3219B3;
+  opacity: 0.7;
+   /* Dark Coffee brown on hover */
+}
+
+/* Scrollbar Arrows (Up/Down Buttons) */
+::-webkit-scrollbar-button:single-button {
+  background-color: #E5D9BB;
+  border: 2px solid #4A3219;
+  display: block;
+  height: 16px;
+  width: 16px;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Optional: Adding basic pixel-art arrows using Data URIs */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  /* Up Arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%231E1E1E" height="10" viewBox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M7 14l5-5 5 5z"/></svg>');
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  /* Down Arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%231E1E1E" height="10" viewBox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+}
+b
