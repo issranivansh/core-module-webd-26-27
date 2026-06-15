@@ -21,7 +21,7 @@ export default function Home() {
 }
     return (<>
         <div className="mx-auto">
-            <h1 className=" bg-[#79553D] text-6xl font-bold text-[#F4F0E6] flex justify-center items-center font-silkscreen rounded-md my-6 mx-6 p ">Notes</h1>
+            <h1 className=" bg-[#79553D] text-6xl font-bold text-[#F4F0E6] flex justify-center items-center font-silkscreen rounded-md my-6 mx-6 py-4 ">Notes</h1>
             {notes.map((note) => (
                 <React.Fragment key={note.id}>
                 <div  className="flex items-center justify-center gap-2">
